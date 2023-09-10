@@ -10,7 +10,6 @@
 /* ________ Divs -------- */
 
 .container {
-    background: black;
     height: 100vh;
     width: 100vw;
     position: relative;
@@ -22,59 +21,104 @@
 
 .content {
     color: white;
-    background: rgb(128, 128, 128, 0.3);
     padding-top: 50px;
-    height: 75vh;
-    width: 75vw;
-    border: 2px solid white;
+    height: 75%;
+    width: 75%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     background-image: url('/assets/images/garden.jpeg');
-    background-size: cover; 
+    background-size: cover;    
     background-position: center; 
     background-repeat: no-repeat;
 }
 
-.content:hover {
-    transform: translate(-50%, -50%) scale(1.05); 
-    transition: transform 0.7s ease-in-out;
+/* ________ Header -------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sticky-header {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.sticky-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+.sticky-header nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.sticky-header nav ul li a:hover {
+    color: #ff9900;
+}
+
+.content {
+    margin-top: 50px; 
+    padding: 20px;
 }
 
 /* ________ Menu -------- */
 
 .menu {
+    text-align: cener;
+    margin-top: 50px;
+}
+
+.menu ul {
     list-style: none;
-    text-align: center;
     padding: 0;
     margin: 0;
-    position: absolute;
-    bottom: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
 }
 
-.menu li {
-    display: inline-block;
-    margin: 10px;
+menu ul li {
+    margin: 0;
+    padding: 0;
 }
 
-.menu li a {
+menu ul li a {
     text-decoration: none;
-    background-color: rgb(255, 255, 255, 0.7);
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    padding: 10px;
-    border: 2px solid white;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    color: #333;
+    margin: 0 15px; 
 }
 
 .menu li a:hover {
     background-color: white;
-    color: black;
 }
 
-/* ________ Menu -------- */
+/* ________ Footer -------- */
+
+.sticky-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: sticky;
+    bottom: 0;
+}
